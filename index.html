@@ -10,7 +10,7 @@
 
   <meta
     name="description"
-    content="Azahar Privé, propiedades exclusivas en Valencia."
+    content="Azahar Privé, agencia inmobiliaria especializada en propiedades exclusivas en Valencia."
   >
 
   <title>Azahar Privé | Inmobiliaria de lujo en Valencia</title>
@@ -24,8 +24,8 @@
     rel="stylesheet"
   >
 
-  <!-- Hoja de estilos -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- Archivo CSS -->
+  <link rel="stylesheet" href="./styles.css?v=3">
 </head>
 
 <body>
@@ -60,7 +60,7 @@
     </div>
   </div>
 
-  <!-- Navegación -->
+  <!-- Cabecera y navegación -->
   <header class="main-header">
     <div class="container navigation">
 
@@ -109,7 +109,7 @@
 
   <main>
 
-    <!-- Hero -->
+    <!-- Portada principal -->
     <section class="hero" id="inicio">
       <div class="hero-overlay"></div>
 
@@ -226,7 +226,7 @@
       </div>
     </section>
 
-    <!-- Propiedades -->
+    <!-- Catálogo de propiedades -->
     <section class="section properties-section" id="propiedades">
       <div class="container">
 
@@ -247,7 +247,7 @@
 
         <div class="property-grid" id="propertyGrid">
 
-          <!-- Propiedad 1 -->
+          <!-- PROPIEDAD 1 -->
           <article
             class="property-card"
             data-id="1"
@@ -259,7 +259,7 @@
           >
             <div class="property-image">
               <img
-                src="images/atico.jpg"
+                src="./images/atico.jpg?v=3"
                 alt="Ático con terraza en Pla del Remei"
               >
 
@@ -297,7 +297,7 @@
             </div>
           </article>
 
-          <!-- Propiedad 2 -->
+          <!-- PROPIEDAD 2 -->
           <article
             class="property-card"
             data-id="2"
@@ -309,7 +309,7 @@
           >
             <div class="property-image">
               <img
-                src="images/villa.jpg"
+                src="./images/villa.jpg?v=3"
                 alt="Villa de lujo con piscina en Los Monasterios"
               >
 
@@ -347,7 +347,7 @@
             </div>
           </article>
 
-          <!-- Propiedad 3 -->
+          <!-- PROPIEDAD 3 -->
           <article
             class="property-card"
             data-id="3"
@@ -359,7 +359,7 @@
           >
             <div class="property-image">
               <img
-                src="images/interior.jpg"
+                src="./images/interior.jpg?v=3"
                 alt="Piso señorial reformado en Ciutat Vella"
               >
 
@@ -397,65 +397,171 @@
             </div>
           </article>
 
+          <!-- PROPIEDAD 4 -->
+          <article
+            class="property-card"
+            data-id="4"
+            data-operation="venta"
+            data-location="campolivar"
+            data-type="villa"
+            data-price="1850000"
+            data-features="piscina terraza garaje"
+          >
+            <div class="property-image">
+              <img
+                src="./images/villa2.jpg?v=3"
+                alt="Villa mediterránea en Campolivar"
+              >
+
+              <span class="badge">Villa exclusiva</span>
+
+              <button
+                type="button"
+                class="favorite"
+                data-favorite="4"
+                aria-label="Guardar propiedad"
+              >
+                ♡
+              </button>
+            </div>
+
+            <div class="property-content">
+              <p class="property-price">1.850.000 €</p>
+              <h3>Villa mediterránea con piscina</h3>
+              <p class="property-location">Campolivar, Valencia</p>
+
+              <ul class="property-details">
+                <li>5 habitaciones</li>
+                <li>4 baños</li>
+                <li>460 m²</li>
+                <li>Parcela 1.200 m²</li>
+              </ul>
+
+              <button
+                type="button"
+                class="button button-card visit-button"
+                data-property="Villa mediterránea en Campolivar"
+              >
+                Solicitar visita privada
+              </button>
+            </div>
+          </article>
+
+          <!-- PROPIEDAD 5 -->
+          <article
+            class="property-card"
+            data-id="5"
+            data-operation="venta"
+            data-location="gran-via"
+            data-type="piso"
+            data-price="1350000"
+            data-features="terraza balcon"
+          >
+            <div class="property-image">
+              <img
+                src="./images/balcon.jpg?v=3"
+                alt="Piso exclusivo con balcón en Gran Vía"
+              >
+
+              <span class="badge">Finca señorial</span>
+
+              <button
+                type="button"
+                class="favorite"
+                data-favorite="5"
+                aria-label="Guardar propiedad"
+              >
+                ♡
+              </button>
+            </div>
+
+            <div class="property-content">
+              <p class="property-price">1.350.000 €</p>
+              <h3>Vivienda señorial con balcón</h3>
+              <p class="property-location">Gran Vía, Valencia</p>
+
+              <ul class="property-details">
+                <li>4 habitaciones</li>
+                <li>3 baños</li>
+                <li>245 m²</li>
+                <li>Balcón exterior</li>
+              </ul>
+
+              <button
+                type="button"
+                class="button button-card visit-button"
+                data-property="Vivienda señorial en Gran Vía"
+              >
+                Solicitar visita privada
+              </button>
+            </div>
+          </article>
+
+          <!-- PROPIEDAD 6 -->
+          <article
+            class="property-card"
+            data-id="6"
+            data-operation="temporal"
+            data-location="costa"
+            data-type="villa"
+            data-price="5800"
+            data-features="piscina terraza mar"
+          >
+            <div class="property-image">
+              <img
+                src="./images/arena.jpg?v=3"
+                alt="Propiedad exclusiva cerca del mar en Valencia"
+              >
+
+              <span class="badge">Alquiler premium</span>
+
+              <button
+                type="button"
+                class="favorite"
+                data-favorite="6"
+                aria-label="Guardar propiedad"
+              >
+                ♡
+              </button>
+            </div>
+
+            <div class="property-content">
+              <p class="property-price">5.800 €/mes</p>
+              <h3>Residencia mediterránea junto al mar</h3>
+              <p class="property-location">Pinedo / Costa de Valencia</p>
+
+              <ul class="property-details">
+                <li>4 habitaciones</li>
+                <li>3 baños</li>
+                <li>320 m²</li>
+                <li>Vistas al mar</li>
+              </ul>
+
+              <button
+                type="button"
+                class="button button-card visit-button"
+                data-property="Residencia mediterránea junto al mar"
+              >
+                Solicitar visita privada
+              </button>
+            </div>
+          </article>
+
         </div>
-<!-- Propiedad 4 -->
-<article
-  class="property-card"
-  data-id="4"
-  data-operation="venta"
-  data-location="campolivar"
-  data-type="villa"
-  data-price="1850000"
-  data-features="piscina terraza garaje"
->
-  <div class="property-image">
-    <img
-      src="./images/villa-2.jpg"
-      alt="Villa de lujo en Campolivar"
-    >
 
-    <span class="badge">Exclusiva</span>
-
-    <button
-      type="button"
-      class="favorite"
-      data-favorite="4"
-      aria-label="Guardar propiedad"
-    >
-      ♡
-    </button>
-  </div>
-
-  <div class="property-content">
-    <p class="property-price">1.850.000 €</p>
-
-    <h3>Villa mediterránea con piscina</h3>
-
-    <p class="property-location">
-      Campolivar, Valencia
-    </p>
-
-    <ul class="property-details">
-      <li>5 habitaciones</li>
-      <li>4 baños</li>
-      <li>460 m²</li>
-      <li>Parcela 1.200 m²</li>
-    </ul>
-
-    <button
-      type="button"
-      class="button button-card visit-button"
-      data-property="Villa mediterránea en Campolivar"
-    >
-      Solicitar visita privada
-    </button>
-  </div>
-</article>
+        <!-- Mensaje cuando no existen resultados -->
         <div class="no-results" id="noResults" hidden>
           <h3>No encontramos propiedades con esos criterios</h3>
-          <p>Prueba ampliando la zona, el precio o las características.</p>
 
-          <button type="button" class="button button-primary" id="resetFilters">
+          <p>
+            Pruebe ampliando la zona, el precio o las características.
+          </p>
+
+          <button
+            type="button"
+            class="button button-primary"
+            id="resetFilters"
+          >
             Restablecer filtros
           </button>
         </div>
@@ -463,14 +569,17 @@
       </div>
     </section>
 
-    <!-- Zonas -->
+    <!-- Zonas de Valencia -->
     <section class="section neighborhoods-section" id="zonas">
       <div class="container">
 
         <div class="section-heading">
           <div>
             <p class="eyebrow dark">Vivir Valencia</p>
-            <h2>Descubra las zonas más exclusivas de Valencia</h2>
+
+            <h2>
+              Descubra las zonas más exclusivas de Valencia
+            </h2>
           </div>
 
           <p class="section-introduction">
@@ -483,46 +592,52 @@
 
           <article class="neighborhood-card">
             <img
-              src="images/atico.jpg"
+              src="./images/balcon.jpg?v=3"
               alt="Pla del Remei y Gran Vía"
             >
 
             <div class="neighborhood-overlay">
               <h3>Pla del Remei & Gran Vía</h3>
+
               <p>
                 Elegancia, boutiques, gastronomía y edificios señoriales.
               </p>
+
               <span>32 propiedades →</span>
             </div>
           </article>
 
           <article class="neighborhood-card">
             <img
-              src="images/piso.jpg"
+              src="./images/interior.jpg?v=3"
               alt="Ciutat Vella y El Carmen"
             >
 
             <div class="neighborhood-overlay">
               <h3>Ciutat Vella / El Carmen</h3>
+
               <p>
                 Historia, cultura y lujo contemporáneo en pleno centro.
               </p>
+
               <span>28 propiedades →</span>
             </div>
           </article>
 
           <article class="neighborhood-card">
             <img
-              src="images/villa.jpg"
+              src="./images/villa2.jpg?v=3"
               alt="Los Monasterios y Campolivar"
             >
 
             <div class="neighborhood-overlay">
               <h3>Los Monasterios / Campolivar</h3>
+
               <p>
                 Privacidad, naturaleza, colegios internacionales y grandes
                 parcelas.
               </p>
+
               <span>19 propiedades →</span>
             </div>
           </article>
@@ -531,7 +646,7 @@
       </div>
     </section>
 
-    <!-- Servicios -->
+    <!-- Servicios VIP -->
     <section class="services-section" id="servicios">
       <div class="container">
 
@@ -545,6 +660,7 @@
           <article class="service">
             <span class="service-icon">◇</span>
             <h3>Personal Shopper Inmobiliario</h3>
+
             <p>
               Localizamos propiedades públicas y oportunidades confidenciales.
             </p>
@@ -553,6 +669,7 @@
           <article class="service">
             <span class="service-icon">⌂</span>
             <h3>Propiedades Off-Market</h3>
+
             <p>
               Acceso reservado a activos que no se publican en portales.
             </p>
@@ -561,6 +678,7 @@
           <article class="service">
             <span class="service-icon">§</span>
             <h3>Asesoramiento legal y fiscal</h3>
+
             <p>
               Acompañamiento profesional durante toda la operación.
             </p>
@@ -569,6 +687,7 @@
           <article class="service">
             <span class="service-icon">▱</span>
             <h3>Home Staging & Interiorismo</h3>
+
             <p>
               Presentamos cada inmueble para potenciar su valor.
             </p>
@@ -578,13 +697,13 @@
       </div>
     </section>
 
-    <!-- Propietarios y formulario -->
+    <!-- Formulario para propietarios -->
     <section class="owner-section" id="propietarios">
 
       <div class="owner-image">
         <img
-          src="images/valoracion.jpg"
-          alt="Terraza de una propiedad exclusiva en Valencia"
+          src="./images/arena.jpg?v=3"
+          alt="Propiedad mediterránea en Valencia"
         >
 
         <blockquote>
@@ -640,10 +759,21 @@
           <label>
             Tipo de consulta
             <select name="inquiry">
-              <option value="vender">Quiero vender mi propiedad</option>
-              <option value="alquilar">Quiero alquilar mi propiedad</option>
-              <option value="comprar">Quiero comprar una propiedad</option>
-              <option value="visita">Solicitar una visita</option>
+              <option value="vender">
+                Quiero vender mi propiedad
+              </option>
+
+              <option value="alquilar">
+                Quiero alquilar mi propiedad
+              </option>
+
+              <option value="comprar">
+                Quiero comprar una propiedad
+              </option>
+
+              <option value="visita">
+                Solicitar una visita
+              </option>
             </select>
           </label>
 
@@ -694,19 +824,26 @@
             Solicitar valoración confidencial
           </button>
 
-          <p class="form-message" id="formMessage" aria-live="polite"></p>
+          <p
+            class="form-message"
+            id="formMessage"
+            aria-live="polite"
+          ></p>
 
         </form>
       </div>
     </section>
 
-    <!-- Nosotros -->
+    <!-- Sobre la agencia -->
     <section class="section about-section" id="nosotros">
       <div class="container about-content">
 
         <div>
           <p class="eyebrow dark">Azahar Privé</p>
-          <h2>Experiencia local. Atención completamente personal.</h2>
+
+          <h2>
+            Experiencia local. Atención completamente personal.
+          </h2>
         </div>
 
         <p>
@@ -766,8 +903,8 @@
     WhatsApp
   </a>
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+  <!-- Archivo JavaScript -->
+  <script src="./script.js?v=3"></script>
 
 </body>
 </html>
