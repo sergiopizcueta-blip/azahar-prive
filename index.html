@@ -24,8 +24,8 @@
     rel="stylesheet"
   >
 
-  <!-- Archivo CSS -->
-  <link rel="stylesheet" href="./styles.css?v=3">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="./styles.css?v=7">
 </head>
 
 <body>
@@ -60,7 +60,7 @@
     </div>
   </div>
 
-  <!-- Cabecera y navegación -->
+  <!-- Cabecera -->
   <header class="main-header">
     <div class="container navigation">
 
@@ -109,7 +109,7 @@
 
   <main>
 
-    <!-- Portada principal -->
+    <!-- Portada -->
     <section class="hero" id="inicio">
       <div class="hero-overlay"></div>
 
@@ -226,7 +226,7 @@
       </div>
     </section>
 
-    <!-- Catálogo de propiedades -->
+    <!-- Catálogo -->
     <section class="section properties-section" id="propiedades">
       <div class="container">
 
@@ -247,7 +247,7 @@
 
         <div class="property-grid" id="propertyGrid">
 
-          <!-- PROPIEDAD 1 -->
+          <!-- Propiedad 1: ático -->
           <article
             class="property-card"
             data-id="1"
@@ -259,7 +259,7 @@
           >
             <div class="property-image">
               <img
-                src="./images/atico.jpg?v=3"
+                src="./images/atico.jpg?v=7"
                 alt="Ático con terraza en Pla del Remei"
               >
 
@@ -297,7 +297,7 @@
             </div>
           </article>
 
-          <!-- PROPIEDAD 2 -->
+          <!-- Propiedad 2: villa -->
           <article
             class="property-card"
             data-id="2"
@@ -309,8 +309,8 @@
           >
             <div class="property-image">
               <img
-                src="./images/villa.jpg?v=3"
-                alt="Villa de lujo con piscina en Los Monasterios"
+                src="./images/villa.jpg?v=7"
+                alt="Villa de lujo en Los Monasterios"
               >
 
               <span class="badge">Obra nueva</span>
@@ -347,7 +347,7 @@
             </div>
           </article>
 
-          <!-- PROPIEDAD 3 -->
+          <!-- Propiedad 3: interior -->
           <article
             class="property-card"
             data-id="3"
@@ -359,8 +359,8 @@
           >
             <div class="property-image">
               <img
-                src="./images/interior.jpg?v=3"
-                alt="Piso señorial reformado en Ciutat Vella"
+                src="./interior.jpg?v=7"
+                alt="Interior de una residencia señorial en Ciutat Vella"
               >
 
               <span class="badge">Reforma premium</span>
@@ -397,7 +397,7 @@
             </div>
           </article>
 
-          <!-- PROPIEDAD 4 -->
+          <!-- Propiedad 4: villa 2 -->
           <article
             class="property-card"
             data-id="4"
@@ -409,7 +409,7 @@
           >
             <div class="property-image">
               <img
-                src="./images/villa2.jpg?v=3"
+                src="./images/villa2.jpg?v=7"
                 alt="Villa mediterránea en Campolivar"
               >
 
@@ -447,7 +447,7 @@
             </div>
           </article>
 
-          <!-- PROPIEDAD 5 -->
+          <!-- Propiedad 5: balcón -->
           <article
             class="property-card"
             data-id="5"
@@ -455,12 +455,12 @@
             data-location="gran-via"
             data-type="piso"
             data-price="1350000"
-            data-features="terraza balcon"
+            data-features="terraza"
           >
             <div class="property-image">
               <img
-                src="./images/balcon.jpg?v=3"
-                alt="Piso exclusivo con balcón en Gran Vía"
+                src="./images/balcon.jpg?v=7"
+                alt="Vivienda señorial con balcón en Gran Vía"
               >
 
               <span class="badge">Finca señorial</span>
@@ -497,7 +497,7 @@
             </div>
           </article>
 
-          <!-- PROPIEDAD 6 -->
+          <!-- Propiedad 6: arena -->
           <article
             class="property-card"
             data-id="6"
@@ -509,8 +509,8 @@
           >
             <div class="property-image">
               <img
-                src="./images/arena.jpg?v=3"
-                alt="Propiedad exclusiva cerca del mar en Valencia"
+                src="./images/arena.jpg?v=7"
+                alt="Residencia mediterránea junto al mar"
               >
 
               <span class="badge">Alquiler premium</span>
@@ -547,9 +547,59 @@
             </div>
           </article>
 
+          <!-- Propiedad 7: piso -->
+          <article
+            class="property-card"
+            data-id="7"
+            data-operation="venta"
+            data-location="pla-del-remei"
+            data-type="piso"
+            data-price="1650000"
+            data-features="terraza domotica"
+          >
+            <div class="property-image">
+              <img
+                src="./images/piso.jpg?v=7"
+                alt="Piso contemporáneo de lujo en Pla del Remei"
+              >
+
+              <span class="badge">Nueva propiedad</span>
+
+              <button
+                type="button"
+                class="favorite"
+                data-favorite="7"
+                aria-label="Guardar propiedad"
+              >
+                ♡
+              </button>
+            </div>
+
+            <div class="property-content">
+              <p class="property-price">1.650.000 €</p>
+              <h3>Piso contemporáneo de lujo</h3>
+              <p class="property-location">Pla del Remei, Valencia</p>
+
+              <ul class="property-details">
+                <li>4 habitaciones</li>
+                <li>3 baños</li>
+                <li>260 m²</li>
+                <li>Domótica</li>
+              </ul>
+
+              <button
+                type="button"
+                class="button button-card visit-button"
+                data-property="Piso contemporáneo en Pla del Remei"
+              >
+                Solicitar visita privada
+              </button>
+            </div>
+          </article>
+
         </div>
 
-        <!-- Mensaje cuando no existen resultados -->
+        <!-- Sin resultados -->
         <div class="no-results" id="noResults" hidden>
           <h3>No encontramos propiedades con esos criterios</h3>
 
@@ -569,7 +619,7 @@
       </div>
     </section>
 
-    <!-- Zonas de Valencia -->
+    <!-- Zonas -->
     <section class="section neighborhoods-section" id="zonas">
       <div class="container">
 
@@ -592,7 +642,7 @@
 
           <article class="neighborhood-card">
             <img
-              src="./images/balcon.jpg?v=3"
+              src="./images/balcon.jpg?v=7"
               alt="Pla del Remei y Gran Vía"
             >
 
@@ -609,7 +659,7 @@
 
           <article class="neighborhood-card">
             <img
-              src="./images/interior.jpg?v=3"
+              src="./images/piso.jpg?v=7"
               alt="Ciutat Vella y El Carmen"
             >
 
@@ -626,7 +676,7 @@
 
           <article class="neighborhood-card">
             <img
-              src="./images/villa2.jpg?v=3"
+              src="./images/villa2.jpg?v=7"
               alt="Los Monasterios y Campolivar"
             >
 
@@ -646,7 +696,7 @@
       </div>
     </section>
 
-    <!-- Servicios VIP -->
+    <!-- Servicios -->
     <section class="services-section" id="servicios">
       <div class="container">
 
@@ -697,12 +747,12 @@
       </div>
     </section>
 
-    <!-- Formulario para propietarios -->
+    <!-- Propietarios -->
     <section class="owner-section" id="propietarios">
 
       <div class="owner-image">
         <img
-          src="./images/arena.jpg?v=3"
+          src="./images/arena.jpg?v=7"
           alt="Propiedad mediterránea en Valencia"
         >
 
@@ -759,21 +809,10 @@
           <label>
             Tipo de consulta
             <select name="inquiry">
-              <option value="vender">
-                Quiero vender mi propiedad
-              </option>
-
-              <option value="alquilar">
-                Quiero alquilar mi propiedad
-              </option>
-
-              <option value="comprar">
-                Quiero comprar una propiedad
-              </option>
-
-              <option value="visita">
-                Solicitar una visita
-              </option>
+              <option value="vender">Quiero vender mi propiedad</option>
+              <option value="alquilar">Quiero alquilar mi propiedad</option>
+              <option value="comprar">Quiero comprar una propiedad</option>
+              <option value="visita">Solicitar una visita</option>
             </select>
           </label>
 
@@ -834,7 +873,7 @@
       </div>
     </section>
 
-    <!-- Sobre la agencia -->
+    <!-- Nosotros -->
     <section class="section about-section" id="nosotros">
       <div class="container about-content">
 
@@ -857,7 +896,7 @@
 
   </main>
 
-  <!-- Pie de página -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-grid">
 
@@ -872,16 +911,16 @@
       </address>
 
       <nav class="footer-links">
-        <a href="#">Política de privacidad</a>
-        <a href="#">Aviso legal</a>
+        <a href="#propietarios">Política de privacidad</a>
+        <a href="#nosotros">Aviso legal</a>
         <a href="#servicios">Propiedades Off-Market</a>
-        <a href="#">Blog Valencia Lifestyle</a>
+        <a href="#zonas">Valencia Lifestyle</a>
       </nav>
 
       <div class="social-links">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="YouTube">YouTube</a>
+        <a href="#inicio">Instagram</a>
+        <a href="#inicio">LinkedIn</a>
+        <a href="#inicio">YouTube</a>
       </div>
 
     </div>
@@ -892,7 +931,7 @@
     </div>
   </footer>
 
-  <!-- Botón flotante de WhatsApp -->
+  <!-- WhatsApp -->
   <a
     class="whatsapp-button"
     href="https://wa.me/34600000000?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20una%20propiedad."
@@ -903,8 +942,8 @@
     WhatsApp
   </a>
 
-  <!-- Archivo JavaScript -->
-  <script src="./script.js?v=3"></script>
+  <!-- JavaScript -->
+  <script src="./script.js?v=7"></script>
 
 </body>
 </html>
