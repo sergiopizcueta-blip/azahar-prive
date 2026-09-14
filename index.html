@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Azahar Privé, propiedades exclusivas en Valencia."
+  >
+
+  <title>Azahar Privé | Inmobiliaria de lujo en Valencia</title>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Barra superior -->
+  <div class="topbar">
+    <div class="container topbar-content">
+
+      <div class="topbar-options">
+        <button type="button">ES</button>
+        <span>·</span>
+        <button type="button">EN</button>
+        <span>·</span>
+        <button type="button">DE</button>
+        <span>·</span>
+        <button type="button">FR</button>
+
+        <span class="separator"></span>
+
+        <select aria-label="Seleccionar divisa">
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+          <option value="GBP">GBP</option>
+        </select>
+      </div>
+
+      <div class="topbar-contact">
+        <a href="#servicios">Private Office / Servicio VIP</a>
+        <a href="tel:+34960000000">☎ +34 960 00 00 00</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Navegación -->
+  <header class="main-header">
+    <div class="container navigation">
+
+      <a href="#inicio" class="logo" aria-label="Azahar Privé">
+        <strong>AZAHAR PRIVÉ</strong>
+        <span>Valencia Luxury Real Estate</span>
+      </a>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#propiedades" data-operation="venta">Comprar</a>
+        <a href="#propiedades" data-operation="alquiler">Alquilar</a>
+        <a href="#propiedades">Áticos & Villas</a>
+        <a href="#zonas">Zonas de Valencia</a>
+        <a href="#propietarios">Servicios a propietarios</a>
+        <a href="#nosotros">Nosotros</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#propietarios" class="button button-outline">
+          Valora tu propiedad
+        </a>
+
+        <button
+          type="button"
+          class="favorites-button"
+          id="showFavorites"
+          aria-label="Mostrar propiedades guardadas"
+        >
+          ♡ Guardados
+          <span id="favoritesCount">0</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <p class="eyebrow">Valencia · Luxury Real Estate</p>
+
+        <h1>
+          Propiedades extraordinarias en las ubicaciones más codiciadas de
+          Valencia.
+        </h1>
+
+        <p class="hero-description">
+          Una selección privada de inmuebles únicos. Un servicio personalizado
+          para personas únicas.
+        </p>
+      </div>
+
+      <!-- Buscador -->
+      <div class="container search-wrapper">
+        <form class="property-search" id="propertySearch">
+
+          <div class="search-tabs" role="tablist">
+            <button
+              type="button"
+              class="search-tab active"
+              data-operation="venta"
+            >
+              En venta
+            </button>
+
+            <button
+              type="button"
+              class="search-tab"
+              data-operation="alquiler"
+            >
+              Alquiler de larga estancia
+            </button>
+
+            <button
+              type="button"
+              class="search-tab"
+              data-operation="temporal"
+            >
+              Alquiler temporal premium
+            </button>
+          </div>
+
+          <input
+            type="hidden"
+            id="operation"
+            name="operation"
+            value="venta"
+          >
+
+          <div class="search-fields">
+
+            <label class="search-field">
+              <span>Ubicación</span>
+
+              <select id="location" name="location">
+                <option value="todas">Todas las zonas</option>
+                <option value="pla-del-remei">Pla del Remei</option>
+                <option value="gran-via">Gran Vía</option>
+                <option value="ciutat-vella">Ciutat Vella</option>
+                <option value="los-monasterios">Los Monasterios</option>
+                <option value="campolivar">Campolivar</option>
+                <option value="costa">Pinedo / Costa</option>
+              </select>
+            </label>
+
+            <label class="search-field">
+              <span>Tipo de propiedad</span>
+
+              <select id="propertyType" name="propertyType">
+                <option value="todos">Todos los tipos</option>
+                <option value="atico">Ático dúplex</option>
+                <option value="villa">Villa de lujo</option>
+                <option value="piso">Piso señorial</option>
+                <option value="casa">Casa histórica</option>
+              </select>
+            </label>
+
+            <label class="search-field">
+              <span>Precio máximo</span>
+
+              <select id="maxPrice" name="maxPrice">
+                <option value="99999999">Sin límite</option>
+                <option value="1000000">Hasta 1.000.000 €</option>
+                <option value="2500000">Hasta 2.500.000 €</option>
+                <option value="4000000">Hasta 4.000.000 €</option>
+                <option value="6000">Hasta 6.000 €/mes</option>
+              </select>
+            </label>
+
+            <label class="search-field">
+              <span>Características</span>
+
+              <select id="feature" name="feature">
+                <option value="todas">Todas</option>
+                <option value="piscina">Piscina privada</option>
+                <option value="terraza">Terraza panorámica</option>
+                <option value="garaje">Garaje doble</option>
+                <option value="domotica">Domótica</option>
+                <option value="mar">Vistas al mar</option>
+              </select>
+            </label>
+
+            <button type="submit" class="button button-primary search-button">
+              Buscar propiedades
+            </button>
+
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Propiedades -->
+    <section class="section properties-section" id="propiedades">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow dark">Nuestra selección</p>
+            <h2>Selección exclusiva de inmuebles</h2>
+          </div>
+
+          <button type="button" class="text-link" id="showAll">
+            Ver todas las propiedades →
+          </button>
+        </div>
+
+        <p class="results-message" id="resultsMessage" aria-live="polite">
+          Mostrando todas las propiedades.
+        </p>
+
+        <div class="property-grid" id="propertyGrid">
+
+          <!-- Propiedad 1 -->
+          <article
+            class="property-card"
+            data-id="1"
+            data-operation="venta"
+            data-location="pla-del-remei"
+            data-type="atico"
+            data-price="2450000"
+            data-features="terraza domotica"
+          >
+            <div class="property-image">
+              <img
+                src="images/atico.jpg"
+                alt="Ático con terraza en Pla del Remei"
+              >
+
+              <span class="badge">Exclusiva</span>
+
+              <button
+                type="button"
+                class="favorite"
+                data-favorite="1"
+                aria-label="Guardar propiedad"
+              >
+                ♡
+              </button>
+            </div>
+
+            <div class="property-content">
+              <p class="property-price">2.450.000 €</p>
+              <h3>Ático privado en Pla del Remei</h3>
+              <p class="property-location">Pla del Remei, Valencia</p>
+
+              <ul class="property-details">
+                <li>4 habitaciones</li>
+                <li>3 baños</li>
+                <li>280 m²</li>
+                <li>Terraza 45 m²</li>
+              </ul>
+
+              <button
+                type="button"
+                class="button button-card visit-button"
+                data-property="Ático privado en Pla del Remei"
+              >
+                Solicitar visita privada
+              </button>
+            </div>
+          </article>
+
+          <!-- Propiedad 2 -->
+          <article
+            class="property-card"
+            data-id="2"
+            data-operation="venta"
+            data-location="los-monasterios"
+            data-type="villa"
+            data-price="3200000"
+            data-features="piscina terraza garaje domotica"
+          >
+            <div class="property-image">
+              <img
+                src="images/villa.jpg"
+                alt="Villa de lujo con piscina en Los Monasterios"
+              >
+
+              <span class="badge">Obra nueva</span>
+
+              <button
+                type="button"
+                class="favorite"
+                data-favorite="2"
+                aria-label="Guardar propiedad"
+              >
+                ♡
+              </button>
+            </div>
+
+            <div class="property-content">
+              <p class="property-price">3.200.000 €</p>
+              <h3>Villa contemporánea con piscina</h3>
+              <p class="property-location">Los Monasterios, Puçol</p>
+
+              <ul class="property-details">
+                <li>5 habitaciones</li>
+                <li>5 baños</li>
+                <li>620 m²</li>
+                <li>Parcela 1.800 m²</li>
+              </ul>
+
+              <button
+                type="button"
+                class="button button-card visit-button"
+                data-property="Villa contemporánea en Los Monasterios"
+              >
+                Solicitar visita privada
+              </button>
+            </div>
+          </article>
+
+          <!-- Propiedad 3 -->
+          <article
+            class="property-card"
+            data-id="3"
+            data-operation="alquiler"
+            data-location="ciutat-vella"
+            data-type="piso"
+            data-price="4500"
+            data-features="terraza"
+          >
+            <div class="property-image">
+              <img
+                src="images/piso.jpg"
+                alt="Piso señorial reformado en Ciutat Vella"
+              >
+
+              <span class="badge">Reforma premium</span>
+
+              <button
+                type="button"
+                class="favorite"
+                data-favorite="3"
+                aria-label="Guardar propiedad"
+              >
+                ♡
+              </button>
+            </div>
+
+            <div class="property-content">
+              <p class="property-price">4.500 €/mes</p>
+              <h3>Residencia señorial reformada</h3>
+              <p class="property-location">Ciutat Vella, Valencia</p>
+
+              <ul class="property-details">
+                <li>3 habitaciones</li>
+                <li>2 baños</li>
+                <li>210 m²</li>
+                <li>Edificio histórico</li>
+              </ul>
+
+              <button
+                type="button"
+                class="button button-card visit-button"
+                data-property="Residencia señorial en Ciutat Vella"
+              >
+                Solicitar visita privada
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="no-results" id="noResults" hidden>
+          <h3>No encontramos propiedades con esos criterios</h3>
+          <p>Prueba ampliando la zona, el precio o las características.</p>
+
+          <button type="button" class="button button-primary" id="resetFilters">
+            Restablecer filtros
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Zonas -->
+    <section class="section neighborhoods-section" id="zonas">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow dark">Vivir Valencia</p>
+            <h2>Descubra las zonas más exclusivas de Valencia</h2>
+          </div>
+
+          <p class="section-introduction">
+            Diferentes estilos de vida unidos por una misma esencia
+            mediterránea.
+          </p>
+        </div>
+
+        <div class="neighborhood-grid">
+
+          <article class="neighborhood-card">
+            <img
+              src="images/atico.jpg"
+              alt="Pla del Remei y Gran Vía"
+            >
+
+            <div class="neighborhood-overlay">
+              <h3>Pla del Remei & Gran Vía</h3>
+              <p>
+                Elegancia, boutiques, gastronomía y edificios señoriales.
+              </p>
+              <span>32 propiedades →</span>
+            </div>
+          </article>
+
+          <article class="neighborhood-card">
+            <img
+              src="images/piso.jpg"
+              alt="Ciutat Vella y El Carmen"
+            >
+
+            <div class="neighborhood-overlay">
+              <h3>Ciutat Vella / El Carmen</h3>
+              <p>
+                Historia, cultura y lujo contemporáneo en pleno centro.
+              </p>
+              <span>28 propiedades →</span>
+            </div>
+          </article>
+
+          <article class="neighborhood-card">
+            <img
+              src="images/villa.jpg"
+              alt="Los Monasterios y Campolivar"
+            >
+
+            <div class="neighborhood-overlay">
+              <h3>Los Monasterios / Campolivar</h3>
+              <p>
+                Privacidad, naturaleza, colegios internacionales y grandes
+                parcelas.
+              </p>
+              <span>19 propiedades →</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="services-section" id="servicios">
+      <div class="container">
+
+        <div class="services-heading">
+          <p class="eyebrow">Nuestro valor diferencial</p>
+          <h2>Un servicio privado, a su medida</h2>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service">
+            <span class="service-icon">◇</span>
+            <h3>Personal Shopper Inmobiliario</h3>
+            <p>
+              Localizamos propiedades públicas y oportunidades confidenciales.
+            </p>
+          </article>
+
+          <article class="service">
+            <span class="service-icon">⌂</span>
+            <h3>Propiedades Off-Market</h3>
+            <p>
+              Acceso reservado a activos que no se publican en portales.
+            </p>
+          </article>
+
+          <article class="service">
+            <span class="service-icon">§</span>
+            <h3>Asesoramiento legal y fiscal</h3>
+            <p>
+              Acompañamiento profesional durante toda la operación.
+            </p>
+          </article>
+
+          <article class="service">
+            <span class="service-icon">▱</span>
+            <h3>Home Staging & Interiorismo</h3>
+            <p>
+              Presentamos cada inmueble para potenciar su valor.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Propietarios y formulario -->
+    <section class="owner-section" id="propietarios">
+
+      <div class="owner-image">
+        <img
+          src="images/valoracion.jpg"
+          alt="Terraza de una propiedad exclusiva en Valencia"
+        >
+
+        <blockquote>
+          “Valencia es belleza, luz y hogar.”
+        </blockquote>
+      </div>
+
+      <div class="owner-form-wrapper">
+
+        <p class="eyebrow dark">Propietarios</p>
+
+        <h2>
+          ¿Desea vender o alquilar su propiedad de lujo en Valencia?
+        </h2>
+
+        <p>
+          Reciba una valoración confidencial y un plan de comercialización
+          personalizado.
+        </p>
+
+        <form class="contact-form" id="contactForm">
+
+          <label>
+            Nombre *
+            <input
+              type="text"
+              name="name"
+              placeholder="Su nombre"
+              required
+            >
+          </label>
+
+          <label>
+            Teléfono *
+            <input
+              type="tel"
+              name="phone"
+              placeholder="+34 600 000 000"
+              required
+            >
+          </label>
+
+          <label>
+            Correo electrónico *
+            <input
+              type="email"
+              name="email"
+              placeholder="nombre@email.com"
+              required
+            >
+          </label>
+
+          <label>
+            Tipo de consulta
+            <select name="inquiry">
+              <option value="vender">Quiero vender mi propiedad</option>
+              <option value="alquilar">Quiero alquilar mi propiedad</option>
+              <option value="comprar">Quiero comprar una propiedad</option>
+              <option value="visita">Solicitar una visita</option>
+            </select>
+          </label>
+
+          <label>
+            Horario preferido
+            <select name="schedule">
+              <option value="indiferente">Indiferente</option>
+              <option value="manana">Por la mañana</option>
+              <option value="tarde">Por la tarde</option>
+            </select>
+          </label>
+
+          <fieldset>
+            <legend>¿Cómo prefiere que le contactemos?</legend>
+
+            <label class="radio-option">
+              <input
+                type="radio"
+                name="meeting"
+                value="videollamada"
+                checked
+              >
+              Videollamada
+            </label>
+
+            <label class="radio-option">
+              <input
+                type="radio"
+                name="meeting"
+                value="presencial"
+              >
+              Cita presencial
+            </label>
+          </fieldset>
+
+          <input
+            type="hidden"
+            name="selectedProperty"
+            id="selectedProperty"
+          >
+
+          <label class="privacy-check">
+            <input type="checkbox" required>
+            Acepto la política de privacidad.
+          </label>
+
+          <button type="submit" class="button button-gold">
+            Solicitar valoración confidencial
+          </button>
+
+          <p class="form-message" id="formMessage" aria-live="polite"></p>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section class="section about-section" id="nosotros">
+      <div class="container about-content">
+
+        <div>
+          <p class="eyebrow dark">Azahar Privé</p>
+          <h2>Experiencia local. Atención completamente personal.</h2>
+        </div>
+
+        <p>
+          Acompañamos a compradores, inversores y propietarios que buscan un
+          servicio inmobiliario discreto, transparente y especializado en
+          Valencia.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <strong>AZAHAR PRIVÉ</strong>
+        <span>Valencia Luxury Real Estate</span>
+      </div>
+
+      <address>
+        Calle Poeta Querol<br>
+        46002 Valencia, España
+      </address>
+
+      <nav class="footer-links">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Aviso legal</a>
+        <a href="#servicios">Propiedades Off-Market</a>
+        <a href="#">Blog Valencia Lifestyle</a>
+      </nav>
+
+      <div class="social-links">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Azahar Privé. Todos los derechos reservados.</p>
+      <p>Valencia. Siempre una buena idea.</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a
+    class="whatsapp-button"
+    href="https://wa.me/34600000000?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20una%20propiedad."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar mediante WhatsApp"
+  >
+    WhatsApp
+  </a>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
